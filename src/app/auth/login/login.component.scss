@@ -1,0 +1,88 @@
+@import '../../../assets/scss/vars';
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-45deg, $color-dart-green, $color-primary-green, $color-light-green, $color-primary-grey);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-content {
+  width: 400px;
+  background-color: white;
+  // min-height: 50vh;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
+
+  padding: {
+    bottom: 40px;
+  }
+}
+
+.container-content {
+  h1 {
+    text-align: center;
+
+    font: {
+      size: 30px;
+      weight: bold;
+
+    }
+
+    color: $color-primary-green;
+
+    margin: {
+      top: 40px;
+      bottom: 50px;
+    }
+  }
+}
+
+
+.form-container {
+  display: block;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 80%;
+}
+
+.create-acount-container {
+  a {
+    display: block;
+    color: $color-primary-grey;
+    margin: {
+      left: auto;
+      right: auto;
+      top: 5px;
+    }
+    text-decoration: none;
+    text-align: center;
+
+  }
+
+  a:hover {
+    color: $color-dart-light-green;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

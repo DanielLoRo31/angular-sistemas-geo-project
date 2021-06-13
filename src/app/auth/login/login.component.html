@@ -1,0 +1,15 @@
+<div class="login-container">
+  <div class="container-content">
+    <h1>Ingresa a CashCoin</h1>
+    <div class="form-container" [formGroup]="formGroup">
+      <app-input-custom [text]="'email'" [type]="'email'" formControlName="email"></app-input-custom>
+      <app-input-custom [text]="'password'" [type]="'password'" formControlName="password"></app-input-custom>
+
+    </div>
+    <div class="create-acount-container">
+      <app-button [text]="'Ingresar'" (clickEvent)="loginAction()"></app-button>
+      <a [routerLink]="['/auth/register']">Crear Cuenta</a>
+      <a [routerLink]="['/home']">Regresar</a>
+    </div>
+  </div>
+</div>

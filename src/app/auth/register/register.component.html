@@ -1,0 +1,32 @@
+<div class="register-container">
+  <div class="container-content">
+    <h1>Registrate en CashCoin</h1>
+    <div class="form-container" [formGroup]="formGroup">
+      <div class="container-fluid p-0 m-0">
+        <div class="row p-0 m-0">
+          <div class="col-12 p-0 m-0">
+            <app-input-custom [text]="'nombre'" [type]="'text'" formControlName="name"></app-input-custom>
+          </div>
+          <div class="col-12 p-0 m-0">
+            <app-input-custom [text]="'email'" [type]="'email'" formControlName="email"></app-input-custom>
+          </div>
+          <div class="col-12 p-0 m-0">
+            <app-input-custom [text]="'password'" [type]="'password'" formControlName="password"></app-input-custom>
+          </div>
+          <div class="col-12 p-0 m-0">
+            <app-autocomplete-direction [text]="'dirección'" [type]="'text'" formControlName="direction" (setGeometry)="setGeometry($event)"></app-autocomplete-direction>
+            <!-- <app-input-custom [text]="'dirección'" [type]="'text'" formControlName="direction"></app-input-custom> -->
+          </div>
+          
+        </div>
+      </div>
+      
+      
+
+    </div>
+    <div class="create-acount-container">
+      <app-button [text]="'Registrate'" (clickEvent)="registerAction()"></app-button>
+    </div>
+  </div>
+</div>
+

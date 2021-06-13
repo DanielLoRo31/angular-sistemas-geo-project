@@ -1,0 +1,42 @@
+@import '../../../assets/scss/vars';
+
+.navbar {
+  background-color: transparent !important;
+  min-height: 100px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: 11000;
+  transition: .2s;
+  .navbar-brand {
+    img {
+      width: 70px;
+    }
+  }
+}
+
+.navbar.stckNav {
+  padding: {
+    top: 0px;
+    bottom: 0px
+  }
+  background-color: black !important;
+  min-height: 50px;
+  .navbar-brand {
+    img {
+      width: 70px;
+    }
+  }
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 17px;
+}
+
+.nav-link.active{
+  font-weight: bold;
+  color: $color-primary-green !important;
+}

@@ -1,0 +1,13 @@
+<div class="all-container">
+  <div class="section-container">
+
+  </div>
+  <div class="content-container">
+    <h1 data-aos="fade-down">Bienvenido {{this.user && this.user.name}}</h1>
+    <hr data-aos="zoom-in">
+    <p data-aos="fade-up">Pronto podras controlar CashCoin desde tu consola de Administración</p>
+    <div class="map-container">
+      <app-map [markText]="this.user && this.user.direction" [lat]="this.user && this.user.geometry.lat" [lng]="this.user && this.user.geometry.lng"></app-map>
+    </div>
+  </div>
+</div>

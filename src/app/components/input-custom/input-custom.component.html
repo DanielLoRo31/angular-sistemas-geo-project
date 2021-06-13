@@ -1,0 +1,8 @@
+<label class="input-container">
+  <span><img src="../../../assets/img/inputs/user.png"></span>
+  <input [type]="type ? type : 'text'" [value]="value ? value : ''" (input)="onInput($event.target.value)"
+    (change)="onChangeValue($event)">
+  <div class="ph-container" [ngClass]="{'data-inside': (value && value.length > 0)}">
+    {{text}}
+  </div>
+</label>

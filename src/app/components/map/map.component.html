@@ -1,0 +1,11 @@
+<agm-map  [latitude]="lat" [longitude]="lng" [zoom]="15" [disableDefaultUI]="false">
+  <agm-map-type-control>
+    <button mat-flat-button>Satellite</button>
+    <button mat-flat-button>RoadMap</button>
+  </agm-map-type-control>
+  <agm-marker [latitude]="lat" [longitude]="lng">
+    <agm-info-window>
+      <h1 class="mark-title">{{markText}}</h1>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>

@@ -1,0 +1,28 @@
+<div class="section-container d-flex align-items-center justify-content-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5 d-flex align-items-center justify-content-center">
+        <div data-aos="fade-right" class="phone-container">
+          <div class="content-phone">
+            <a class="twitter-timeline" href="https://twitter.com/CC_CashCoin?ref_src=twsrc%5Etfw" target="_blank">Tweets by
+              CC_CashCoin</a>
+          </div>
+          <div class="circle-phone">
+          </div>
+          <div class="camera-phone">
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-7 d-flex align-items-center justify-content-center network-container-img">
+        <div class="col-12 text-center container-text">
+          <h1 data-aos="fade-down">Nuestras Redes Sociales</h1>
+          <hr data-aos="zoom-in">
+          <div data-aos="fade-up" class="row mt-5">
+            <app-network-link *ngFor="let net of networks" class="col d-flex align-items-center justify-content-center" [logo]="net.logo" [refLink]="net.url"></app-network-link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

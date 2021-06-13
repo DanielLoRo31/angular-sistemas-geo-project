@@ -1,0 +1,32 @@
+@import '../../../assets/scss/vars';
+
+.button-container {
+  display: block;
+
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  border: none;
+  outline: none;
+  color: white;
+  background-color: $color-primary-green;
+
+  padding: {
+    left: 15px;
+    right: 15px;
+    top: 5px;
+    bottom: 5px;
+  }
+
+  border-radius: 5px;
+}
+
+.button-container:hover {
+  opacity: .9;
+}
+
+.button-container:active {
+  background-color: $color-dart-light-green;
+}
