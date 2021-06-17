@@ -8,7 +8,7 @@
       <!-- <span class="navbar-toggler-icon"></span> -->
       <img *ngIf="menu; else equisBlock" [src]="this.ASSETS + '/img/hamburgesa.png'" width="50px">
       <ng-template #equisBlock>
-        <img src="../../../assets/img/equis.png" width="50px">
+        <img [src]="this.ASSETS + '/img/equis.png'" width="50px">
       </ng-template>
     </button>
     <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavAltMarkup">
