@@ -7,6 +7,7 @@ import {
   Output,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-input-custom',
@@ -26,6 +27,8 @@ export class InputCustomComponent implements OnInit {
   @Input() margin: string;
 
   @Output() changeEvent: EventEmitter<any> = new EventEmitter<any>();
+
+  ASSETS = environment.ASSETS_URL;
 
   value: string;
   onChange = (_: any) => {};
