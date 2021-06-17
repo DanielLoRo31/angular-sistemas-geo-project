@@ -19,7 +19,7 @@
           <h1 data-aos="fade-down">Nuestras Redes Sociales</h1>
           <hr data-aos="zoom-in">
           <div data-aos="fade-up" class="row mt-5">
-            <app-network-link *ngFor="let net of networks" class="col d-flex align-items-center justify-content-center" [logo]="net.logo" [refLink]="net.url"></app-network-link>
+            <app-network-link *ngFor="let net of networks" class="col d-flex align-items-center justify-content-center" [logo]="this.ASSETS + net.logo" [refLink]="net.url"></app-network-link>
           </div>
         </div>
       </div>

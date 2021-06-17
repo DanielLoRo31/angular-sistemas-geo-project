@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./map.component.scss'],
 })
 export class MapComponent implements OnInit {
-  @Input() lat: number = 21.152604346968197;
-  @Input() lng: number = -101.71132393095881;
+  @Input() lat: number = 20.9846486741212;
+  @Input() lng: number = -101.28429516253313;
   @Input() markText: string = 'CashCoin'
   icon = {
     url: 'https://bestmedia.mx/wp-content/uploads/2020/03/InexperiencedGlossyAsiaticgreaterfreshwaterclam-small.gif',

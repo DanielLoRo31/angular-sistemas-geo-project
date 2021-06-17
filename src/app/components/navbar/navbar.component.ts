@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   @Select(MenuState.showMenu) show$: Observable<boolean>;
   fixed: boolean = false;
   ASSETS = environment.ASSETS_URL;
+  menu = true;
 
   constructor(private sessionService: SessionService, private store: Store) {}
 
@@ -34,5 +35,9 @@ export class NavbarComponent implements OnInit {
   async onOut() {
     this.sessionService.removeSession();
     await this.store.dispatch(new SetSessionAction(false)).toPromise();
+  }
+
+  onHamburgerClick() {
+    this.menu = !this.menu;
   }
 }

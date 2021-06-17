@@ -1,6 +1,6 @@
 <carousel  data-aos="fade-up" [loop]="false" [autoplay]="true" [height]="500" [freeScroll]="true" [cellsToShow]="3" [cellsToScroll]="3" [objectFit]="'cover'" [lightDOM]="true"
   class="carousel--slider-alignment">
   <div class="carousel-cell" *ngFor="item of items; index as i">
-    <img [src]="'http://placehold.it/500x1000?text=' + ( i + 1 )">
+    <img [src]="this.ASSETS + '/img/screens/' + ( i + 1 ) + '.jpeg'">
   </div>
 </carousel>

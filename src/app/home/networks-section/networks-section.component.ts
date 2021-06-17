@@ -7,7 +7,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./networks-section.component.scss'],
 })
 export class NetworksSectionComponent implements OnInit {
-  networks = [
+  ASSETS = environment.ASSETS_URL;
+
+  networksProb = [
     {
       logo: environment.ASSETS_URL + '/img/networks/facebook.png',
       title: 'facebook',
@@ -30,7 +32,23 @@ export class NetworksSectionComponent implements OnInit {
     },
   ];
 
+  networks: Object[] = [];
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.initValues()
+  }
+
+  async initValues() {
+    try {
+      let res = await fetch(this.ASSETS + '/data/redes.json')
+      let data = await res.json();
+      this.networks = data
+
+    } catch (error) {
+      console.error(error)
+    }
+    
+  }
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "logo": "/img/networks/facebook.png",
+    "title": "facebook",
+    "url": "https://www.facebook.com/CashCoin-102732121976335"
+  },
+  {
+    "logo": "/img/networks/blogger.png",
+    "title": "Blog",
+    "url": "https://cc-cashcoin.blogspot.com/"
+  },
+  {
+    "logo": "/img/networks/instagram.png",
+    "title": "Instagram",
+    "url": "https://www.instagram.com/cc.cashcoin/"
+  },
+  {
+    "logo": "/img/networks/twitter.png",
+    "title": "Twitter",
+    "url": "https://twitter.com/CC_CashCoin"
+  }
+]

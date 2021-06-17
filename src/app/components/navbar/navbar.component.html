@@ -4,8 +4,12 @@
       <img [src]="this.ASSETS + '/img/logo_transparente.png'" alt=""/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" (click)="onHamburgerClick()">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <img *ngIf="menu; else equisBlock" [src]="this.ASSETS + '/img/hamburgesa.png'" width="50px">
+      <ng-template #equisBlock>
+        <img src="../../../assets/img/equis.png" width="50px">
+      </ng-template>
     </button>
     <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
