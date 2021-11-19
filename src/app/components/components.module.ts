@@ -12,6 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
 import { AutocompleteDirectionComponent } from './autocomplete-direction/autocomplete-direction.component';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+import { NavAccordeonComponent } from './nav-accordeon/nav-accordeon.component';
+import { environment } from 'src/environments/environment';
+import { VideoComponent } from './video/video.component';
+import { AppleButtonComponent } from './apple-button/apple-button.component';
+import { AndroidButtonComponent } from './android-button/android-button.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +27,15 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     InputCustomComponent,
     ButtonComponent,
     AutocompleteDirectionComponent,
+    NavAccordeonComponent,
+    VideoComponent,
+    AppleButtonComponent,
+    AndroidButtonComponent,
   ],
   imports: [
     CommonModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDnY8kMwai0w66KFgVDfGoFom4BfJ-hkM0',
+      apiKey: environment.GOOGLE_MAPS_URL,
     }),
     IvyCarouselModule,
     RouterModule,
@@ -40,7 +49,11 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     NetworkLinkComponent,
     InputCustomComponent,
     ButtonComponent,
-    AutocompleteDirectionComponent
+    AutocompleteDirectionComponent,
+    NavAccordeonComponent,
+    VideoComponent,
+    AppleButtonComponent,
+    AndroidButtonComponent,
   ],
 })
 export class ComponentsModule {}

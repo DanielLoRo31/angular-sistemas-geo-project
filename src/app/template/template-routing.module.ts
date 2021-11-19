@@ -19,6 +19,12 @@ const routes: Routes = [
           import('../profile/profile.module').then((m) => m.ProfileModule),
           canActivate: [ProfileGuard]
       },
+      {
+        path: 'console',
+        loadChildren: () =>
+          import('../admin/admin.module').then((m) => m.AdminModule),
+          canActivate: [ProfileGuard]
+      },
       { path: '**', redirectTo: 'home' },
     ],
   },

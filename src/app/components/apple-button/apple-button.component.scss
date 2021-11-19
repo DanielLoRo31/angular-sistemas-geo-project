@@ -1,0 +1,19 @@
+@import '../../../assets/scss/vars';
+
+.btn-store {
+  background-color: $color-primary-green;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 3px solid white;
+  width: 200px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: .02s;
+
+  &:hover {
+    opacity: .8;
+  }
+}

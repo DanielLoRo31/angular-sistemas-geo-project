@@ -10,10 +10,11 @@ import { MapSectionComponent } from './map-section/map-section.component';
 import { TechnologiesSectionComponent } from './technologies-section/technologies-section.component';
 import { NetworksSectionComponent } from './networks-section/networks-section.component';
 import { ComponentsModule } from '../components/components.module';
+import { VideoSectionComponent } from './video-section/video-section.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, SliderSectionComponent, AboutSectionComponent, ScreenshotsSectionComponent, MapSectionComponent, TechnologiesSectionComponent, NetworksSectionComponent],
+  declarations: [HomeComponent, SliderSectionComponent, AboutSectionComponent, ScreenshotsSectionComponent, MapSectionComponent, TechnologiesSectionComponent, NetworksSectionComponent, VideoSectionComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
