@@ -25,6 +25,8 @@ export class InputCustomComponent implements OnInit {
   @Input() type: string;
   @Input() text: string;
   @Input() margin: string;
+  @Input() icon: string = 'user.png'
+
 
   @Output() changeEvent: EventEmitter<any> = new EventEmitter<any>();
 

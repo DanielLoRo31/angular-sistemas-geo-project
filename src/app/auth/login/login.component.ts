@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user/user.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class LoginComponent implements OnInit {
   formGroup: FormGroup;
-
+  
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
@@ -39,12 +40,36 @@ export class LoginComponent implements OnInit {
           this.formGroup.get('email').value,
           this.formGroup.get('password').value
         );
+        
+
         if (login) {
           this.router.navigate(['/', 'profile']);
+        } else {
+          Swal.fire({
+            icon: 'warning',
+            iconColor: '#88962c',
+            title: 'Usuario',
+            text: 'Contraseña o Correo incorrectos',
+            confirmButtonColor: '#58611e'
+          })
         }
       } catch (error) {
-        console.error('Error: ', error);
+        Swal.fire({
+          icon: 'error',
+          iconColor: '#88962c',
+          title: 'Error',
+          text: error,
+          confirmButtonColor: '#58611e'
+        })
       }
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        iconColor: '#88962c',
+        title: 'Datos',
+        text: 'Faltan datos',
+        confirmButtonColor: '#58611e'
+      })
     }
   }
 

@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AppleButtonComponent implements OnInit {
 
-  logo = environment.ASSETS_URL + '/img/logos/app-store-logo-white.png'
+  logo = environment.ASSETS_URL + '/img/logos/app-store-logo-white-cs.png'
 
   constructor() { }
 

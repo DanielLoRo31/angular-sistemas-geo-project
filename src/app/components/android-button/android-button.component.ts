@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AndroidButtonComponent implements OnInit {
 
-  logo = environment.ASSETS_URL + '/img/logos/google-store-logo-white.png'
+  logo = environment.ASSETS_URL + '/img/logos/google-store-logo-white-dm.png'
   
   constructor() { }
 
