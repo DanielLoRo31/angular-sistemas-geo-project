@@ -1,0 +1,44 @@
+<div class="section-container">
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-md-6">
+        <div class="chart-design">
+          <canvas baseChart [data]="this.charts.singleData" [labels]="this.charts.labels"
+            [options]="this.charts.options" [plugins]="this.charts.plugins" [legend]="this.charts.legend"
+            [chartType]="this.charts.type">
+          </canvas>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+        <div class="chart-design">
+          <app-polygon-map [lng]="this.transactions.length > 0 ? this.transactions[0].lon : 0" [lat]="this.transactions.length > 0 ? this.transactions[0].lat : 0" [paths]="polygonPaths" [height]="'250px'"></app-polygon-map>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="row" style="overflow-x: auto;">
+      <div class="row mt-5 tlb-row-container">
+        <div class="col-12 tbl-section-row tbl-title">
+          <div>Id</div>
+          <div>Type</div>
+          <div>Ref</div>
+          <div>Amount</div>
+          <div>Email</div>
+          <div>City</div>
+        </div>
+        <div class="col-12 tbl-section-row" *ngFor="let txn of transactions" >
+          <div>{{txn.txnuuid}}</div>
+          <div>{{txn.txntype}}</div>
+          <div>{{txn.ref}}</div>
+          <div>{{txn.amount}}</div>
+          <div>{{txn.email}}</div>
+          <div>{{txn.city}}, {{txn.estate}}, {{txn.country}}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

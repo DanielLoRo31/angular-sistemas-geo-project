@@ -10,24 +10,34 @@
         </div>
 
       </div>
+
+      <div class="col-md-6">
+        <div class="chart-design">
+          <app-map [lng]="coordenates.lng" [lat]="coordenates.lat" [markText]="'Transaction'" [height]="'250px'"></app-map>
+        </div>
+        
+      </div>
     </div>
+    
     <div class="row" style="overflow-x: auto;">
       <div class="row mt-5 tlb-row-container">
         <div class="col-12 tbl-section-row tbl-title">
           <div>Id</div>
-          <div>Name</div>
-          <div>Occupation</div>
-          <div>Phone</div>
-          <div>Email</div>
+          <div>Type</div>
+          <div>Ref</div>
+          <div>Amount</div>
+          <div>Month</div>
+          <div>Year</div>
           <div>City</div>
         </div>
-        <div class="col-12 tbl-section-row" *ngFor="let acc of accounts" (click)="navigateTo(acc.auuid)">
-          <div>{{acc.auuid}}</div>
-          <div>{{acc.fname}} {{acc.lname}}</div>
-          <div>{{acc.occupation}}</div>
-          <div>{{acc.phone}}</div>
-          <div>{{acc.email}}</div>
-          <div>{{acc.city}}, {{acc.estate}}, {{acc.country}}</div>
+        <div class="col-12 tbl-section-row" *ngFor="let txn of transactions" (click)="changeCoords(txn.lon, txn.lat)">
+          <div>{{txn.txnuuid}}</div>
+          <div>{{txn.txntype}}</div>
+          <div>{{txn.ref}}</div>
+          <div>{{txn.amount}}</div>
+          <div>{{txn.t_month}}</div>
+          <div>{{txn.t_year}}</div>
+          <div>{{txn.city}}, {{txn.estate}}, {{txn.country}}</div>
         </div>
       </div>
 

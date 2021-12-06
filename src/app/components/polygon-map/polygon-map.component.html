@@ -3,9 +3,9 @@
     <button mat-flat-button>Satellite</button>
     <button mat-flat-button>RoadMap</button>
   </agm-map-type-control>
-  <agm-marker [latitude]="lat" [longitude]="lng">
+  <agm-polygon [paths]="paths">
     <agm-info-window>
       <h1 class="mark-title">{{markText}}</h1>
     </agm-info-window>
-  </agm-marker>
+  </agm-polygon>
 </agm-map>

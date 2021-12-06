@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-nav-accordeon',
@@ -9,15 +10,21 @@ export class NavAccordeonComponent implements OnInit {
   listSection: {
     name: string
     sections: {
-      name: string
+      name: string,
+      route?: string
     }[]
   }[] = []
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.listSection = [
-      { name: 'Data Info', sections: [{ name: 'Transactions' }] },
-      { name: 'Stats', sections: [{ name: 'Places' }] },
+      // { name: 'Data Info', sections: [{ name: 'Accounts', route: 'info'}] },
+      { name: 'Stats', sections: [{ name: 'Accounts', route: 'account'}, { name: 'Transactions', route: 'transactions'}] },
     ]
+  }
+
+  navigateTo(route: string) {
+    console.log(route)
+    this.router.navigate([`/console/${route}`])
   }
 }

@@ -12,6 +12,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { MenuState } from './models/menu/menu.redux';
+import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { MenuState } from './models/menu/menu.redux';
     AngularFireAuthModule,
     AngularFirestoreModule,
     NoopAnimationsModule,
+    ChartsModule,
+    HttpClientModule,
     NgxsModule.forRoot([
       MenuState
     ]),

@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment';
 import { VideoComponent } from './video/video.component';
 import { AppleButtonComponent } from './apple-button/apple-button.component';
 import { AndroidButtonComponent } from './android-button/android-button.component';
+import { PolygonMapComponent } from './polygon-map/polygon-map.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AndroidButtonComponent } from './android-button/android-button.componen
     VideoComponent,
     AppleButtonComponent,
     AndroidButtonComponent,
+    PolygonMapComponent,
   ],
   imports: [
     CommonModule,
@@ -54,6 +56,7 @@ import { AndroidButtonComponent } from './android-button/android-button.componen
     VideoComponent,
     AppleButtonComponent,
     AndroidButtonComponent,
+    PolygonMapComponent
   ],
 })
 export class ComponentsModule {}
